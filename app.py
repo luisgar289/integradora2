@@ -13,6 +13,7 @@ urls = (
 )
 
 app = web.application(urls, globals())
+wsgiapp = app.wsgifunc()
 render = web.template.render('templates/')
 
 class Index:
